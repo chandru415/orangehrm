@@ -173,6 +173,11 @@ export default {
       if (!this.submitted) {
         this.submitted = true;
         this.$refs.loginForm.$el.submit();
+        console.log('interacers_login_user');
+        localStorage.setItem(
+          'interacers_login_user',
+          JSON.stringify(this.data()),
+        );
       }
     },
     navigateUrl() {
